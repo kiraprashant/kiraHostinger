@@ -1,0 +1,66 @@
+.Home_background{
+
+    background-image:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.6)), url("../../public/BackgroundImage/background2.jpg");
+    width: 100%;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+.Solgan{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Heading-Size{
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+.Paragraph_size{
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+.Bacground_button_size{
+    border: none;
+    outline: none;
+    background-color: #fcaa30;
+    color: black;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 20px;
+    
+}
+
+.Bacground_button_size:hover{
+
+    background-color: #ff9900;
+
+}
+
+.Gruanttee{
+    margin-left: -25px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+
+@media only screen and (max-width: 576px) {
+ 
+    .Heading-Size{
+        font-size: 42px;
+    }
+
+    .Paragraph_size{
+        font-size: 20px;
+        margin: 30px 0px;
+    }
+
+  }

@@ -1,0 +1,286 @@
+.Section_heading_one{
+    color:#02489e;
+    font-weight: bolder;
+    font-size: 42px;
+}
+
+.Home_Solgan{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bolder;
+    margin:auto;
+    padding: 10px 40px;
+    font-size: 18px;
+}
+
+.Support{
+display: flex;
+align-items: center;
+}
+
+.HomeHR{
+    
+    margin-bottom: 40px;
+    
+}
+
+.HomeSelect{
+    outline: none;
+    border: none;
+    background-color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #e5e5e5;
+    width: 150px;
+}
+
+.Heading_Two{
+    background-color: #02489e;
+    font-size: 36px;
+    color:#fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.FirstItem{
+ border: 1px solid #e5e5e5;
+ padding: 20px;
+}
+.FirstItem_Details{
+ display: flex;
+ justify-content: space-around;
+}
+
+.ChildTwo,.ChildThree{
+    border-left: 2px solid #02489e;
+    padding-left: 10px;
+}
+
+.ChildTwo{
+    width: 34%;
+    line-height: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Money{
+    font-size: 64px;
+    text-align: center;
+    color: #02489e;
+}
+.ChildOne , .ChildThree{
+    width: 33%;
+}
+
+.Home_Remove{
+    display: none;
+}
+
+.SecondItem{
+    border: 1px solid #e5e5e5;
+    border-top: none;
+    padding: 20px;
+    font-size: 28px;
+}
+
+.Feature_Header{
+    font-size: 28px;
+    color: #02489e;
+}
+
+.SecondAllItem{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e5e5e5 ;
+    font-size: 16px;
+}
+
+.Services{
+    font-size: 36px;
+    color: #02489e;
+}
+
+.Section_four{
+    background-color: #dfedff;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Home_Search_Domain{
+    width: 25%;
+}
+
+.domain_name_heading{
+    font-size: 48px;
+}
+
+
+.Moving_image{
+    animation-name: example;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: all 1s;
+}
+
+@keyframes example {
+    0%{
+          transform: translateY(0px);
+    }
+
+    50%{
+    
+        transform: translateY(-15px);
+    }
+
+  100%{
+    
+    transform: translateY(0px);
+}
+
+  }
+
+.Form1{
+    /* background-image:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)), url("../../public/ContactImage/contact.jpg");
+    height: 100%;
+    width: 100%;
+    background-image: contain;
+    background-position: center;
+    flex-direction: column;
+    padding: 40px;
+    color: #fff; */
+}
+
+.Form_Class{
+    width: 100%;
+    outline: none;
+    border: 1px solid #2771ca;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.Form_Class:focus{
+    box-shadow:0px 0px 20px #a4cdff ;
+}
+
+.textarea_remove{
+    display: none;
+}
+
+
+
+
+
+@media only screen and (max-width: 992px) {
+
+    .ChildOne{
+        display: none;
+    }
+
+    .visibleChildOne{
+        display: block;
+    }
+
+    .ChildTwo , .ChildThree {
+        width: 50%;
+    }
+
+    .ChildTwo{
+        border: none;
+    }
+
+    .SecondAllItem{
+        flex-direction: column;
+    }
+    .visibleChildOne{
+        width: 100%;
+    }
+
+    .visibleChildTwo , .visibleChildThree{
+      border: none;
+      width: 100%;
+    }
+
+    .domain_name_heading{
+        font-size: 36px;
+    }
+
+    .Home_Search_Domain{
+        width: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+    .HomeHR{
+    
+        width: 100%;
+    }
+
+    .Home_Solgan{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Support{
+         border-bottom: 1px solid #bbbbbb;
+         padding-bottom: 10px;
+         width: 100%;
+
+
+        }
+
+        .FirstItem_Details{
+            flex-direction: column
+        }
+
+        .ChildTwo , .ChildThree{
+            width:100%
+        }
+
+        .ChildTwo{
+            padding: 60px 0px;
+        }
+
+        .ChildThree{
+            border: none;
+            border-top: 1px solid #e5e5e5;
+           
+            white-space: nowrap;
+            margin: 20px 0px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            
+        }
+
+        .domain_name_heading{
+            font-size: 24px;
+        }
+
+        .Home_Search_Domain{
+            width: 100%;
+            font-size: 14px;
+            padding: 10px 0px;
+        }
+
+       
+
+        .Form2{
+            margin-top: 24px;
+        }
+
+        
+   
+
+}

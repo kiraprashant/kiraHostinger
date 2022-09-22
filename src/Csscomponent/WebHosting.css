@@ -1,0 +1,24 @@
+.Webhostingborder{
+ border:1px solid #e5e5e5;
+ padding: 20px 10px;
+ box-shadow: 0px 0px 20px #bebebe;
+ transition: all 1s;
+ 
+}
+
+.Webhostingborder:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 40px #818080;
+}
+
+.Webhostingprice{
+    color: #2771ca;
+    font-weight: bold;
+}
+.Add_To_Cart{
+ color: #fff;
+ border: none;
+ background-color: #0070f8;
+ padding: 10px 30px;
+ border-radius: 20px;
+}

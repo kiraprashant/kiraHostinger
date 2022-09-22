@@ -1,0 +1,49 @@
+.Cart_left p{
+line-height: 40px;
+}
+
+.Cart_left_Header{
+    background-color: #3786e7;
+    color:white;
+    font-size: 14px;
+}
+
+.Cart_price{
+   color:#02489e 
+}
+
+.Subcarts_Select{
+    border: 1px solid #e5e5e5;
+    padding: 5px 10px;
+    margin: 0px 0px;
+    margin-right: 5px;
+    background-color: #fff;
+
+}
+
+.Cart_left_bottom{
+    background-color: rgba(146, 145, 145,.3);
+    padding: 10px 0px;
+}
+
+.Cart_save{
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    padding: 10px 10px;
+    background-color: rgb(146, 145, 145);
+    background-color: #009432;
+    color:#fff;
+    font-size: 18px;
+}
+
+.Order{
+    border: 1px solid #e5e5e5;
+  
+}
+
+.Summary{
+    background-color: #2771ca;
+    padding: 27px 0px;
+    text-align: center;
+    color: #fff;
+}

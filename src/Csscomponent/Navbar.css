@@ -1,0 +1,213 @@
+.Navbar{
+    width:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:999;
+    height: 70px;
+    background-color: #2771ca;
+    box-shadow: 0px 4px 10px #2771ca;
+}
+.linkColor{
+    color:#fff;
+}
+
+.Navline_remove{
+  color: #000;
+}
+
+.Navline_remove:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+.Mobie_menu{
+    /* background-color: #418fee;
+    margin-top: -1px;
+    /* padding: 10px; */
+    /* height: 600px;
+    overflow: auto */ 
+    display: none;
+}
+
+
+.Mobie_menu .Mobile_SubClass li{
+    /* padding: 10px; */
+    color: #fff;
+    font-weight: Bold;
+    list-style: none;
+    border-bottom: 1px solid #fff;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+}
+
+.Nav_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin: 5px 20px;
+}
+
+.Logo{
+ 
+    font-size: 34px;
+    margin-top: -10px;
+    text-shadow: 2px 2px #d4d4d4;
+   
+
+}
+
+.Nav_item{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.Nav_item li{
+    
+    padding: 5px 10px;
+
+}
+
+.sign_logout{
+    border: 1px solid #fff;
+}
+
+.Mobile{
+    display: none;
+}
+
+.Hosting,.Domain{
+    background-color:#fff;
+    margin-top: 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 25px;
+    box-shadow: 2px 2px 40px #d3d3d3;
+    
+}
+
+/* .Navbar_SubMenu_item{
+    opacity:0.8 !important;
+    color:"#2771ca" !important;
+    font-size:"24px" !important;
+
+} */
+
+.arrow_upward{
+    transform: rotate(180deg);
+}
+
+.remove{
+    display: none;
+}
+
+.modal_box_login{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.8);
+    position: fixed;
+    top: 0;
+    z-index: 1999;
+
+}
+
+
+.login_header{
+font-size:72px; 
+color:#2771ca;
+margin-right:10px;
+position: relative;
+bottom: -10px;
+text-shadow:8px 0px  #74a8e9;
+font-weight: bolder;
+
+
+}
+
+.Login{
+    width: 600px;
+    border: 1px solid #e5e5e5;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 0px 25px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #bebebe;
+    background-color: #fff;
+
+}
+
+
+
+.Login_button{
+ 
+    margin: auto;
+    width: 200px;
+    display: block;
+    background-color: #2771ca;
+    border: 1px solid black;
+    padding: 10px 0px;
+    color: #fff;
+
+    
+}
+.Modalhide{
+    display: none;
+    position: relative;
+    top:-100px
+}
+
+.closemodal{
+    background-color: #b71010;
+    padding: 10px 15px;
+    position: relative;
+    bottom: -15px;
+    font-size: 22px;
+    font-weight: bolder;
+    color:white;
+    border-radius: 50%;
+    cursor: pointer;
+    text-shadow: 4px 0px #611616;
+
+    
+}
+
+
+
+@media only screen and (max-width: 576px) {
+    .Mobile{
+        display: inline-block;
+    }
+    .Desktop{
+        display: none;
+    }
+
+    .Nav_wrapper{
+        margin: 15px 20px;
+    }
+
+    .Mobie_menu{
+        
+        background-color: #418fee;
+        margin-top: -1px;
+        /* padding: 10px; */
+        height: 400px;
+        overflow: auto
+    }
+
+    .Mobie_menu_visible{
+        display: block;
+    }
+
+    .Login{
+        width: 350px;
+
+    }
+
+  }
