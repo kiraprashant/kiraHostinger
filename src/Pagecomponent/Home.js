@@ -21,6 +21,19 @@ function Home(props) {
     }, [Months])
 
   
+    const Submit = () =>{
+
+      if(!Name || !Email){
+           alert("please fill The Form")
+      }
+      else{
+        alert("Your Problem Will be Solved within 24Hrs Or 48Hrs")
+        setTextAreaDisplay("")
+        setEmail("")
+        setName("")
+      }
+
+    }
     
 
     const handlepackageValue = (e) =>{
@@ -261,7 +274,7 @@ function Home(props) {
                         <textarea className={`Form_Class mt-4 ${TextAreaDisplay}`}></textarea>
 
                         <div className='my-4'>
-                         <button className='Login_button'>Login</button>
+                         <button onClick={()=> Submit()} className='Login_button'>Submit</button>
                       </div>
 
                       </div>
