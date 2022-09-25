@@ -11,6 +11,7 @@ import WordpressHosting from './Pagecomponent/WordpressHosting';
 import CloudHosting from './Pagecomponent/CloudHosting';
 import Carts from './Pagecomponent/Carts';
 import Footer from './Pagecomponent/Footer';
+import Domain from './Pagecomponent/Domain';
 
 
 
@@ -126,6 +127,7 @@ function Hostinger() {
          <Route path="/cloud_hosting" element={<CloudHosting CloudHostingdata = {Cloudhosting} addcloudhosting = {addcloudhosting} />} />
          <Route path="/wordpress_hosting" element={<WordpressHosting wordpresshostingData = {wordpresshosting} addwordpresshosting = {addwordpresshosting} />} />
          <Route path="/cart" element={<Carts  Carts={Cart} addwebhosting = {addwebhosting} addwordpresshosting = {addwordpresshosting} Removehostingplan = {Removehostingplan} addcloudhosting = {addcloudhosting} />} />
+         <Route path="/domain_search" element={<Domain />} />
        </Routes>
        <Footer />
     </>

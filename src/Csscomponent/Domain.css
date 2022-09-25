@@ -1,0 +1,85 @@
+.Button_search{
+    padding: 10px;
+    outline: none;
+    border: 1px solid #fcaa30;
+    background-color: #fcaa30;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    transition: all .3s linear;
+    font-size: 20px;
+}
+
+.Button_search:hover{
+    background-color: #eb8f05;
+    letter-spacing: 5px;
+}
+
+.Available_Domain{
+    border: 1px solid #dadce0;
+    box-shadow: 0px 5px 5px #dadce0;
+}
+
+.AllDomainAvailable{
+     background-color: rgba(0, 255, 106,.2);
+     border-radius: 0;
+     margin: 0;
+     box-shadow: none;
+     
+}
+
+.Available_Domain p{
+
+    font-size: 22px;
+    color: #595b68;
+    
+
+}
+
+
+.Available_Domain_remove{
+    display: none;
+}
+
+.section3 h2{
+color:hsl(213, 95%, 23%);
+font-size: 36px;
+}
+
+.Alldomain_card{
+    border: 1px solid #dadce0;
+    box-shadow: 0px 5px 5px #dadce0;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.Alldomain_card:hover{
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.section4{
+ background-color: hsl(213, 95%, 23%);
+ color:white
+}
+
+.Domain_details{
+    border:1px solid #dadce0;
+    box-shadow: 0px 5px 5px #dadce0;
+}
+
+.Section5 h1{
+ color: hsl(213, 95%, 23%);
+ font-weight: bolder;
+ font-size: 46px;
+ text-align: center;
+
+}
+
+.Domain_details_heading{
+    font-size: 32px;
+    color:#033572;
+    border-bottom: 3px solid hsl(213, 95%, 23%);
+    margin-bottom: 40px;
+}
+

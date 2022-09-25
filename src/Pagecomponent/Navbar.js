@@ -136,7 +136,7 @@ const sorry = () =>{
                     </li>
                     <li><div onClick={()=> MobileSubMenuDomain()} style={{display:"flex",justifyContent:"space-between"}} className = "px-2 py-3">Domain <i className={`fa-solid fa-angle-down ${HostingArrow}`}></i></div>
                     <ul style={{borderTop:"1px solid white",backgroundColor:"#5fa2f5"}} className = {`px-4 py-4 ${MobileSubMenudomain}`}>
-                          <li onClick={() => sorry()} className = "py-4">Domain Name Search</li>
+                          <li className = "py-4"><Link className='text-white' to = "/domain_search" >Domain Name Search</Link></li>
                           <li onClick={() => sorry()} className = "py-4">Whooisi Lookup</li>
                           <li onClick={() => sorry()} className = "py-4">Domain Transfer</li>
 
@@ -187,7 +187,7 @@ const sorry = () =>{
                </div> 
             </div>
 
-            <div onMouseLeave={()=> handledomain() } className={`Domain w-75 ml-2 ${DomainSubMenu}`}>
+            <div onMouseLeave={()=> handledomain() } className={`DomainHosting w-75 ml-2 ${DomainSubMenu}`}>
 
             <div className='px-5 py-5'>
                 <h3>Domain</h3>
@@ -195,7 +195,7 @@ const sorry = () =>{
                
 
                  <div className='mt-5'>
-                    <span  onClick={() => sorry()} className='pt-5 font-weight-bold'><i style={{opacity:0.8,color:"#2771ca",fontSize:"24px"}} className="fa-solid fa-earth-asia pr-2"></i> Domain Name Search</span><br /><span style={{opacity:0.6}}> small Business To Medium Business</span><br />
+                    <span  className='pt-5 font-weight-bold'><i style={{opacity:0.8,color:"#2771ca",fontSize:"24px"}} className="fa-solid fa-earth-asia pr-2"></i> <Link className='text-dark Navline_remove ' to = "/domain_search"><span>Domain Name Search</span></Link></span><br /><span style={{opacity:0.6}}> small Business To Medium Business</span><br />
                  </div>
 
                  <div className='mt-3' >
