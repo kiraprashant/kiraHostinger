@@ -75,7 +75,7 @@ function Carts(props) {
   //  const itemsPrice = Carts.reduce((a, c) => a + (c.Price * c.Months) / 2 , 0)
     const fullyItemprice = Carts.reduce((a, c) => a + (c.Price * c.Months) , 0)
 
-    const Taxprice = itemsPrice > 2000 ? 0 : 200 
+    const Taxprice = itemsPrice > 2000 ? 100 : 200 
 
 
     const Discount = Applied ? itemsPrice * 0.10 : 0

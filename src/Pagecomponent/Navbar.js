@@ -1,6 +1,6 @@
-import React , {useState}from 'react'
+import React , {useState , useEffect}from 'react'
 import "../Csscomponent/Navbar.css"
-import {Link} from "react-router-dom"
+import {Link ,Route} from "react-router-dom"
 
 function Navbar(props) {
    const { Carts } = props
@@ -15,6 +15,10 @@ const [MobileSubMenuhosting, setMobileSubMenuhosting] = useState("remove")
 const [MobileSubMenudomain, setMobileSubMenudomain] = useState("remove")
 
 const [ModalShow, setModalShow] = useState("Modalhide")
+
+// useEffect(()=>{
+//    setMobileMenu("")
+// },[Route])
 
 const HideAndShowModal = (e) =>{
    e.stopPropagation()
@@ -124,9 +128,9 @@ const sorry = () =>{
                   <ul className='Mobile_SubClass'>
                     <li><div onClick={()=> MobileSubMenuHosting()} style={{display:"flex",justifyContent:"space-between"}} className = "px-2 py-3">Hosting <i className={`fa-solid fa-angle-down ${HostingArrow}`}></i></div>
                        <ul style={{borderTop:"1px solid white",backgroundColor:"#5fa2f5"}} className = {`px-4 py-4 ${MobileSubMenuhosting}`}>
-                          <li className = "py-4"><Link className='text-white' to = "/web_hosting" >Web Hosting</Link></li>
-                          <li className = "py-4"><Link className='text-white' to = "/cloud_hosting" > Cloud Hosting</Link></li>
-                          <li className = "py-4"><Link className='text-white' to = "/wordpress_hosting" > Wordpress Hosting</Link></li>
+                          <li  className = "py-4"><Link onClick={() => handleMobileMenu()} className='text-white' to = "/web_hosting" >Web Hosting</Link></li>
+                          <li  className = "py-4"><Link onClick={() => handleMobileMenu()} className='text-white' to = "/cloud_hosting" > Cloud Hosting</Link></li>
+                          <li  className = "py-4"><Link onClick={() => handleMobileMenu()} className='text-white' to = "/wordpress_hosting" > Wordpress Hosting</Link></li>
                           {/* <li className = "py-4">Vps Hosting</li>
                           <li className = "py-4">CyperPanel Hosting</li>
                           <li className = "py-4">MineCraft Server Hosting</li> */}
@@ -136,7 +140,7 @@ const sorry = () =>{
                     </li>
                     <li><div onClick={()=> MobileSubMenuDomain()} style={{display:"flex",justifyContent:"space-between"}} className = "px-2 py-3">Domain <i className={`fa-solid fa-angle-down ${HostingArrow}`}></i></div>
                     <ul style={{borderTop:"1px solid white",backgroundColor:"#5fa2f5"}} className = {`px-4 py-4 ${MobileSubMenudomain}`}>
-                          <li className = "py-4"><Link className='text-white' to = "/domain_search" >Domain Name Search</Link></li>
+                          <li  className = "py-4"><Link onClick={() => handleMobileMenu()} className='text-white' to = "/domain_search" >Domain Name Search</Link></li>
                           <li onClick={() => sorry()} className = "py-4">Whooisi Lookup</li>
                           <li onClick={() => sorry()} className = "py-4">Domain Transfer</li>
 

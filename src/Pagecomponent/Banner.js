@@ -4,8 +4,9 @@ import {Link} from "react-router-dom"
 
 
 function Banner(props) {
-  const {Heading , Paragraph , ButtonName} = props
+  const {Heading , Paragraph , ButtonName , plan} = props
   return (
+    <>
     <div className='mt-5 pt-5 Home_background'>
        <div className='container text-white Solgan'>
            <div className='px-3 text-center'>
@@ -16,6 +17,9 @@ function Banner(props) {
            </div>
        </div>
     </div>
+
+
+    </>
   )
 }
 

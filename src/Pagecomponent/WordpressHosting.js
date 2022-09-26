@@ -1,5 +1,6 @@
 import React , {useState} from 'react'
 import Banner from './Banner'
+import Trust from './Trust'
 
 function WordpressHosting(props) {
 
@@ -9,7 +10,8 @@ function WordpressHosting(props) {
 
   return (
     <>
-         <Banner Heading = "Wordpress Hosting as Dynamic as Your Business" Paragraph = "Start your journey with our Premium plan and get a personal domain, lifetime SSL, and DDoS protection for free with a four-year subscription. " ButtonName = "Get Offer" />
+         <Banner Heading = "Wordpress Hosting as Dynamic as Your Business" Paragraph = "Start your journey with our Premium plan and get a personal domain, lifetime SSL, and DDoS protection for free with a four-year subscription. " ButtonName = "Get Offer"/>
+         <Trust plan = "Workpress Hosting"/>
          <div className='container py-5'>
              <div className='row'>
                 {wordpressHosting.map((elem)=>{

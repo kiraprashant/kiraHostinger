@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Banner from './Banner'
+import Trust from './Trust'
 
 function CloudHosting(props) {
   const {CloudHostingdata , addcloudhosting} = props
@@ -7,6 +8,7 @@ function CloudHosting(props) {
   return (
     <>
           <Banner Heading = "Cloud Hosting as per  your Business Requirement" Paragraph = "Start your journey with our Premium plan and get a personal domain, lifetime SSL, and DDoS protection for free with a four-year subscription. " ButtonName = "Get Offer" />
+          <Trust plan = "Cloud Hosting "/>
           <div className='container py-5'>
              <div className='row'>
                 {CloudHosting.map((elem)=>{

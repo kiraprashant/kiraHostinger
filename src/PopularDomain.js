@@ -12,7 +12,7 @@ const PopularDomanin = [
     },
 
     {
-        id:1,
+        id:3,
         Name:".store",
         Description:"Recommended extension for technology related projects."
     },
