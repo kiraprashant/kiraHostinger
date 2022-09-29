@@ -142,7 +142,7 @@ const sorry = () =>{
                     <ul style={{borderTop:"1px solid white",backgroundColor:"#5fa2f5"}} className = {`px-4 py-4 ${MobileSubMenudomain}`}>
                           <li  className = "py-4"><Link onClick={() => handleMobileMenu()} className='text-white' to = "/domain_search" >Domain Name Search</Link></li>
                           <li onClick={() => sorry()} className = "py-4">Whooisi Lookup</li>
-                          <li onClick={() => sorry()} className = "py-4">Domain Transfer</li>
+                          <li className = "py-4"> <Link onClick={() => handleMobileMenu()} className='text-white' to = "/domain_transfer" > Domain Transfer </Link></li>
 
                        </ul>
                     </li>
@@ -207,7 +207,7 @@ const sorry = () =>{
                  </div>
 
                  <div className='mt-3'>
-                    <span  onClick={() => sorry()} className='pt-5 font-weight-bold'><i style={{opacity:0.8,color:"#2771ca",fontSize:"24px"}} className="fa-solid fa-display fa-lg pr-2"></i> Domain Transfer</span><br /><span style={{opacity:0.6}}> optimized solution for Wordpress</span><br />
+                    <span  className='pt-5 font-weight-bold'><i style={{opacity:0.8,color:"#2771ca",fontSize:"24px"}} className="fa-solid fa-display fa-lg pr-2"></i> <Link className='text-dark Navline_remove ' to = "/domain_transfer"> Domain Transfer </Link></span><br /><span style={{opacity:0.6}}> optimized solution for Wordpress</span><br />
                  </div>
 
 

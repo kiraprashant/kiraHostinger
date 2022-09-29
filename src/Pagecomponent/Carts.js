@@ -116,7 +116,7 @@ function Carts(props) {
                </div>
                <div className='px-4 '>
                <div style={{lineHeight:"10px"}} className='Form2_label'>
-                         <label style={{fontSize:"12px"}} className='Form2_label' htmlFor='name'>Enter The Code Thapa Flat 10% discount </label>
+                         <label style={{fontSize:"12px",lineHeight:"20px"}} className='Form2_label' htmlFor='name'>Enter The Code Thapa Flat 10% discount </label>
                          <input type= "text" value = {CouponCode} className='Form_Class mb-4 d-block' placeholder='Please Enter your Name' id = "name" onChange={(e) => setCouponCode(e.target.value)}/>
                          <div className='mb-4 mx-auto text-center' style={{marginTop:"-15px",fontSize:"12px"}}>
                          {

@@ -1,0 +1,23 @@
+.Gurantee_heading{
+  font-weight:bolder;
+  color:#032c5e;
+}
+
+.Gurantee_paragraph{
+    color:#074da3be;
+    margin:20px 0px 40px 0px ;
+}
+
+.Gurantee_button{
+
+    border: none;
+    outline: none;
+    background-color: #fcaa30;
+    color: black;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 5px 20px;
+
+}
