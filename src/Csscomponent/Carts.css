@@ -3,9 +3,13 @@ line-height: 40px;
 }
 
 .Cart_left_Header{
-    background-color: #3786e7;
+   
     color:white;
     font-size: 14px;
+}
+
+.bg-value{
+    background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
 }
 
 .Cart_price{

@@ -6,6 +6,17 @@ function Subcart(props) {
 
 
   const [Month, setMonths] = useState(Carts.Months)
+  const [Bestvalue, setBestvalue] = useState("bg-primary")
+
+  useEffect(() => {
+   if(Month > 24){
+    setBestvalue("bg-value")
+   }
+   else{
+    setBestvalue("bg-primary")
+   }
+  }, [Month])
+  
  
 
   const handlepackageValue = (e) =>{
@@ -71,7 +82,7 @@ function Subcart(props) {
   return (
 
                     <div className='my-5' style = {{border:"1px solid #e5e5e5"}}>
-                    <div className='px-2 py-3 mb-3 Cart_left_Header d-flex justify-content-between align-items-center  ' style = {{borderBottom:""}}><span>{Carts.package} {Carts.Name} Plan </span> <span className='Cart_save'>Save ₹ <span className=' text-bold'>{Math.round((Carts.Price * Carts.Months)  - (data * Carts.Months))}</span></span></div>
+                    <div className={`px-2 py-3 mb-3 Cart_left_Header d-flex justify-content-between align-items-center ${Bestvalue}`} style = {{borderBottom:""}}><span>{Carts.package} {Carts.Name} Plan </span> <span className='Cart_save'>Save ₹ <span className=' text-bold'>{Math.round((Carts.Price * Carts.Months)  - (data * Carts.Months))}</span></span></div>
 
                     <div className='d-flex justify-content-between align-items-center px-2 '>
                        <div className='Cart_left mt-4'>
