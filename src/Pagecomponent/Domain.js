@@ -30,14 +30,16 @@ function Domain() {
 
             setshowAvailableDomain()
     }
+
+
   return (
     <>
-             <Banner Heading = "Use Our Domain Checker to Search and Buy an Available Domain Name" 
+             <Banner Heading = "Search and Buy an Available Domain Name" 
                      Paragraph = "It’s easy – simply enter your desired domain name and instantly find out if it's available. Register it before someone else takes it."
                      ButtonName = "Get Started" />
 
               <div className='container'>
-                 <div className='row my-5 pb-5 '>
+                 <div className='row mt-5 pb-4 '>
                     <div className='col-md-9 '>
                     <input type= "text" value = {Search} className='Form_Class' placeholder='Search Here' id = "email" onChange={(e)=> setSearch(e.target.value)}/>
                     </div>
@@ -55,8 +57,8 @@ function Domain() {
                  </div>
 
                    <div className='section3'>
-                    <h2 className='my-5 text-center'>Choose From the Most Popular Domain Extensions</h2>
-                    <hr />
+                    <h2 className=' text-center'>Choose From the Most Popular Domain Extensions</h2>
+                 
                       <div className='row'>
 
                         {AllDomain.map((elem)=>{
@@ -123,9 +125,9 @@ function Domain() {
                  </div>
                 </div> 
 
-                <div className='container Section5 py-5 my-5'>
+                <div className='container Section5 '>
                     <h1> FAQs About Domain Name Search </h1>
-                    <p className='text-center pb-5'>Questions and answers regarding the Hostinger Domain Checker tool and domain registration process.</p>
+                    <p className='text-center'>Questions and answers regarding the Hostinger Domain Checker tool and domain registration process.</p>
                    {DomainDeatils.map((elem)=>{
                      return(
                       <div key = {elem.id} className='my-5 px-5 Domain_details '>

@@ -11,8 +11,10 @@ import WordpressHosting from './Pagecomponent/WordpressHosting';
 import CloudHosting from './Pagecomponent/CloudHosting';
 import Carts from './Pagecomponent/Carts';
 import Footer from './Pagecomponent/Footer';
+import ServiceData from './Servicedata';
 import Domain from './Pagecomponent/Domain';
 import DomainTransfer from './Pagecomponent/DomainTransfer';
+import ScrollToTop from './ScrollToTop';
 
 
 
@@ -24,6 +26,7 @@ function Hostinger() {
   const [wordpresshosting, setwordpressWebhosting] = useState(wordpressHostingData)
   const [Cloudhosting, setCloudhosting] = useState(CloudHostingdata)
   const [Cart, setCart] = useState([])
+  const [stateservivedata, setstateservivedata] = useState(ServiceData)
 
   console.log(Cart)
 
@@ -117,13 +120,13 @@ function Hostinger() {
 
 
 
-
   
   return (
     <>
        <Navbar Carts={Cart} />
+         <ScrollToTop />
          <Routes>
-         <Route path="/" element={<Home WebHostingData = {Webhosting} addwebhosting = {addwebhosting} />} />
+         <Route path="/" element={<Home WebHostingData = {Webhosting} addwebhosting = {addwebhosting} ServiceData = {stateservivedata} />} />
          <Route path="/web_hosting" element={<WebHosting  WebHostingData = {Webhosting} addwebhosting = {addwebhosting} />} />
          <Route path="/cloud_hosting" element={<CloudHosting CloudHostingdata = {Cloudhosting} addcloudhosting = {addcloudhosting} />} />
          <Route path="/wordpress_hosting" element={<WordpressHosting wordpresshostingData = {wordpresshosting} addwordpresshosting = {addwordpresshosting} />} />

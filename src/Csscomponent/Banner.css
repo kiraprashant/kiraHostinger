@@ -1,8 +1,9 @@
 .Home_background{
 
-    background-image:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.6)), url("../../public/BackgroundImage/background2.jpg");
+    /* background-color: rgb(2, 72, 158);  */
+    background-image:linear-gradient(rgba(2, 72, 158,.4),rgba(2, 72, 158,.4)), url("../../public/BackgroundImage/background5.jpg");
     width: 100%;
-    height: 800px;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -18,38 +19,98 @@
 }
 
 .Heading-Size{
-    font-size: 48px;
-    font-weight: bolder;
+    font-size: 64px;
+    font-weight: bold;
+    /* color: hsl(12, 100%, 42%) */
+    padding-bottom: 40px;
 }
 
 .Paragraph_size{
     font-size: 24px;
     margin-bottom: 40px;
+    color:hsla(0, 0%, 93%, 0.733)
 }
 .Bacground_button_size{
     border: none;
     outline: none;
-    background-color: #fcaa30;
-    color: black;
+    color: #fff;
+    /* background: linear-gradient(to right , #02489e, transparent); */
     letter-spacing: 1px;
     font-weight: bolder;
     font-size: 20px;
-    border-radius: 20px;
+    border-radius: 5px;
+    transition: all .3s linear;
+
     
 }
 
-.Bacground_button_size:hover{
+.Main_button,.Main_button_read_more{
+    width: 150px;
+    height: 60px;
+    background-color: rgba(0, 0, 0,.6);
+    background-color: transparent;
+    position: relative;
+    border: 3px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all .3s linear;
+    margin-right: 10px;
 
-    background-color: #ff9900;
+}
+.second_button{
+
+    text-align: center;
+    padding: 13px;
+    position: relative;
+    color: #fff;
+    z-index: 10;
+
+}
+
+.Banner_overlay{
+    background-color: #02489e;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all .3s linear;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+
+
+}
+
+.Banner_secondary_overlay{
+    background-color: transparent;
+}
+
+.Main_button:hover .Banner_overlay{
+
+    width: 100%;
+    border-radius: 0;
+}
+
+.Main_button:hover{
+
+ box-shadow: 0px 0px 80px 10px #0073ff;
 
 }
 
 .Gruanttee{
-    margin-left: -25px;
+    margin-left: -23px;
     font-size: 24px;
     font-weight: bold;
     margin-top: 40px;
 }
+
+.logindemo{
+    width: 100;
+    height:100vh;
+    border: 1px solid red;
+}
+
 
 
 
@@ -64,4 +125,38 @@
         margin: 30px 0px;
     }
 
+    .Banner_overlay{
+        background-color: #02489e;
+        width: 100%;
+       border-radius:0;
+    
+    
+    }
+
+  }
+
+  @media only screen and (min-width: 768px) {
+
+  /* 768px */
+  
+.banner_image{
+    /* background-image: url("../../public/BackgroundImage/earth.jpg");*/
+    width: 50%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0,.6);
+    /* background-image: linear-gradient(180deg , rgba(2, 72, 158,.4), rgba(0, 0, 0,.6));; */
+    position: absolute;
+    top:0;
+    left:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  }
+
+  @media only screen and (min-width: 768px) and (max-width:991px) {
+    .banner_image{
+  
+    }
   }

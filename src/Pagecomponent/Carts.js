@@ -85,7 +85,7 @@ function Carts(props) {
     const FinalPrice = Math.round(TotalPrice - Discount)
 
 
-
+    
   return (
     <>
         <Banner Heading = "You’re almost there! Complete your order" Paragraph = "They are Diffrent Hosting package like Web Hosting , Wordpress Hosting And Cloud Hosting." ButtonName = "Add More" />

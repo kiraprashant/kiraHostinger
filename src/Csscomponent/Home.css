@@ -4,20 +4,13 @@
     font-size: 42px;
 }
 
-.Home_Solgan{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: bolder;
-    margin:auto;
-    padding: 10px 40px;
-    font-size: 18px;
-}
+
 
 .Support{
-display: flex;
-align-items: center;
+
 }
+
+
 
 .HomeHR{
     
@@ -37,13 +30,18 @@ align-items: center;
 .Heading_Two{
     background-color: #02489e;
     font-size: 36px;
-    color:#fff;
+    color:#02489e;
     text-align: center;
     padding: 20px;
+    background-color: #fff;
+    font-weight: 700;
 }
 
 .FirstItem{
- border: 1px solid #e5e5e5;
+ /* border: 1px solid #02489e; */
+ /* border-left: 1px solid #02489e ;
+ border-top: 1px solid #02489e ;
+ border-right:1px solid #02489e ; */
  padding: 20px;
 }
 .FirstItem_Details{
@@ -75,32 +73,77 @@ align-items: center;
     width: 33%;
 }
 
-.Home_Remove{
+/* .Home_Remove{
     display: none;
-}
+} */
 
 .SecondItem{
-    border: 1px solid #e5e5e5;
+    
     border-top: none;
-    padding: 20px;
+    /* padding: 20px; */
     font-size: 28px;
+    /* box-shadow: 0px 5px 5px hsl(213, 83%, 88%); */
 }
 
 .Feature_Header{
     font-size: 28px;
     color: #02489e;
+   
+    
+}
+
+.Feature_Header_active{
+    border-top: 0px solid #02489e;
 }
 
 .SecondAllItem{
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid #e5e5e5 ;
     font-size: 16px;
 }
 
 .Services{
     font-size: 36px;
     color: #02489e;
+}
+
+.service_conternt{
+    position: relative;
+}
+
+.server_sub_content{
+    background:linear-gradient(rgba(2, 72, 158,.6),rgba(2, 72, 158,.6));
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index:100;
+    width: 0%;
+    height:100%;
+    opacity:0;
+    overflow: hidden;
+    transition: all .3s linear;
+    color: #fff;
+    font-weight: bold;
+    
+
+
+}
+
+.service_conternt:hover .server_sub_content{
+  width: 100%;
+  opacity:1;
+}
+
+.service_title{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
+}
+
+.Service_mobile{
+  display: none;
 }
 
 .Section_four{
@@ -111,14 +154,31 @@ align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+
+.Home_domain{
+    background-image:linear-gradient(rgba(2, 72, 158,.5),rgba(2, 72, 158,.5)), url("../../public/BackgroundImage/background3.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    color: #fff;
+}
 .Home_Search_Domain{
     width: 25%;
+    color:hsla(0, 0%, 100%, 0.63);
 }
 
 .domain_name_heading{
     font-size: 48px;
 }
 
+.About_us_Heading{
+    color:hsl(213, 96%, 47%);
+}
+
+.About_us_paragraph{
+color:#a6a09f;
+}
 
 .Moving_image{
     animation-name: example;
@@ -162,7 +222,6 @@ align-items: center;
     border: 1px solid #2771ca;
     padding: 10px;
     border-radius: 10px;
-    margin: 5px 0px;
     background-color: #fff;
     margin-bottom: 20px;
 }
@@ -175,11 +234,23 @@ align-items: center;
     display: none;
 }
 
+.Login_button{
+color:red;
+
+}
+
 
 
 
 
 @media only screen and (max-width: 992px) {
+
+    .Home_Solgan{
+        display: block;
+    }
+    .Support{
+
+    }
 
     .ChildOne{
         display: none;
@@ -219,6 +290,18 @@ align-items: center;
 
 }
 
+@media only screen and (max-width: 768px) {
+
+    .mobile-width {
+        width: 100% !important;
+    }
+
+    .hide_solgan{
+        display: none;
+    }
+
+}
+
 @media only screen and (max-width: 576px) {
 
     .HomeHR{
@@ -226,19 +309,13 @@ align-items: center;
         width: 100%;
     }
 
-    .Home_Solgan{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     .Support{
-         border-bottom: 1px solid #bbbbbb;
-         padding-bottom: 10px;
-         width: 100%;
+        
+
 
 
         }
+
 
         .FirstItem_Details{
             flex-direction: column
@@ -254,14 +331,20 @@ align-items: center;
 
         .ChildThree{
             border: none;
-            border-top: 1px solid #e5e5e5;
+           
            
             white-space: nowrap;
-            margin: 20px 0px;
+          
             display: flex;
             flex-direction: column;
-            padding-top: 60px;
+         
             
+        }
+
+        .Service_mobile{
+            background-color: #fff;
+            font-size: 20px;
+            padding: 10px;  
         }
 
         .domain_name_heading{

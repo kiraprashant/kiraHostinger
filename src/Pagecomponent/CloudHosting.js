@@ -5,6 +5,7 @@ import Trust from './Trust'
 function CloudHosting(props) {
   const {CloudHostingdata , addcloudhosting} = props
   const [CloudHosting, setCloudHosting] = useState(CloudHostingdata)
+
   return (
     <>
           <Banner Heading = "Cloud Hosting as per  your Business Requirement" Paragraph = "Start your journey with our Premium plan and get a personal domain, lifetime SSL, and DDoS protection for free with a four-year subscription. " ButtonName = "Get Offer" />

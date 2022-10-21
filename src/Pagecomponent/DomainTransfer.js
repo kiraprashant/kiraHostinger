@@ -7,6 +7,8 @@ import Gurantee from './Gurantee'
 function DomainTransfer() {
     const [DomainTransfer1, setDomainTransfer1] = useState(DomainTrasfer1)
 
+
+
   return (
     <>
      <Banner Heading = "Transfer Your Domain" Paragraph = "Use our special domain transfer offer and migrate your domain name to Hostinger today. " ButtonName = "Get Offer"/>

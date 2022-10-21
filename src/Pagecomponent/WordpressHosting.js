@@ -8,6 +8,7 @@ function WordpressHosting(props) {
     const [wordpressHosting, setwordpressHosting] = useState(wordpresshostingData )
 
 
+
   return (
     <>
          <Banner Heading = "Wordpress Hosting as Dynamic as Your Business" Paragraph = "Start your journey with our Premium plan and get a personal domain, lifetime SSL, and DDoS protection for free with a four-year subscription. " ButtonName = "Get Offer"/>

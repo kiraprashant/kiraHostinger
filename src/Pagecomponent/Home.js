@@ -1,19 +1,23 @@
 import React, { useState ,useEffect } from 'react'
 import Banner from './Banner'
 import ".././Csscomponent/Home.css"
+import {Link} from "react-router-dom"
 
 
 function Home(props) {
 
-  const {WebHostingData , addwebhosting} = props
+  const {WebHostingData , addwebhosting , ServiceData } = props
     const [AllSecondItem, setAllSecondItem] = useState("Home_Remove")
     const [Months, setMonths] = useState(1)
     const [price, setprice] = useState()
     const [Name, setName] = useState("")
     const [Email, setEmail] = useState("")
     const [TextAreaDisplay, setTextAreaDisplay] = useState("textarea_remove")
+    const [Feature_Header_active, setFeature_Header_active] = useState("")
+    const [stateservicedata, setstateservicedata] = useState(ServiceData)
     
     const [WebHosting, setWebHosting] = useState(WebHostingData[1])
+
     useEffect(() => {
 
         Pricemoney()
@@ -81,9 +85,11 @@ function Home(props) {
       
      if(!AllSecondItem){
         setAllSecondItem("Home_Remove")
+        setFeature_Header_active("")
      }
      else{
         setAllSecondItem("")
+        setFeature_Header_active("Feature_Header_active")
      }
 
    }
@@ -97,21 +103,26 @@ function Home(props) {
         setTextAreaDisplay("textarea_remove")
       }
    }
+
   return (
     <>
      <Banner Heading = "Everything You Need to Create a Website" Paragraph = "Join 1,278,620 website owners who are building their businesses online." ButtonName = "Get Started" />
-      <div className='Section_one container my-5 text-center '>
-       <div className='Home_Solgan my-5'>
-       <p className='Support text-primary'><i className="fa-solid fa-shield fa-2x pr-2"></i>Top-Sceurity</p>
-       <p className='Support text-warning'><i className="fa-solid fa-face-smile fa-2x pr-2 "></i> Lightning-fast websites</p>
-        <p className='Support text-success'><i className="fa-solid fa-handshake-simple fa-2x pr-2"></i>User-Friendly</p> </div>   
-      <hr className='text-center mx-auto HomeHR'/>
-         <h1 className='Section_heading_one mb-5'>All-In-One Web Hosting</h1>
-         <p style={{lineHeight:"25px"}} className='w-50 text-center mx-auto mb-5'>We prepared the best web hosting plan for you to start. You will be able to adjust plans as you go - our custom-built algorithm will provide suggestions based on your usage.</p>
-         <hr className='text-center mx-auto HomeHR'/>
+    
+      <div className='Section_one container text-center '>
+
+        <div className='py-5' style={{color:"#b8bfd4",display:"flex",alignItem:"center",justifyContent:"space-between",fontSize:"22px",border:"1px solid b8bfd4" }}>
+           <div>Wordpress</div>
+           <div>Litespeed</div>
+           <div>Cloudflare</div>
+        </div>
+  
+         <h1 className='Section_heading_one '>All-In-One Web Hosting</h1>
+         <p style={{lineHeight:"25px",color:"#9e9796"}} className='w-50 mobile-width text-center mx-auto mb-5'>We prepared the best web hosting plan for you to start. You will be able to adjust plans as you go - our custom-built algorithm will provide suggestions based on your usage.</p>
+   
       </div>
-      <div className='Section_Two container my-5'>
-           <div className='d-flex justify-content-between align-items-center py-4'>
+      <div className='Section_Two my-2'>
+        <div className='container'>
+           <div className='d-flex justify-content-between align-items-center py-2'>
            <span style={{fontSize:"24px"}}>Select Package</span>
            <select className='HomeSelect'  onChange={(e) => handlepackageValue(e)}>
              <option value = "1">1 months</option>
@@ -122,7 +133,7 @@ function Home(props) {
            </div>
            <div className='Heading_Two'>Trusted Web Hosting</div>
            <div className='FirstItem'>
-             <div className='FirstItem_Details py-5'>
+             <div className='FirstItem_Details py-2'>
                 <div className='pl-5 ChildOne'>
                     <p> <i className="fa-solid fa-check text-success pr-2"></i> Unmetered traffic (Unlimited GB) </p>
                     <p> <i className="fa-solid fa-check text-success pr-2"></i>100 Websites</p>
@@ -130,7 +141,7 @@ function Home(props) {
                     <p> <i className="fa-solid fa-check text-success pr-2"></i>Free Weekly Backups </p>
                 </div>
                 <div className='ChildTwo'>
-                    <p className='Money'>{WebHosting.Price} /<span className='MoneyDate' style={{fontSize:"22px"}}>mo</span></p>
+                    <p className='Money'>₹{price} /<span className='MoneyDate' style={{fontSize:"22px"}}>mo</span></p>
                     <p>₹{price} / mo  per Months</p>
                     <button onClick={()=> addwebhosting(WebHosting, Months)} className='Add_To_Cart'> Add To Cart </button>
                 </div>
@@ -142,7 +153,7 @@ function Home(props) {
                 </div>
              </div>
            </div>
-           <div className='SecondItem'><h1 className = "py-3 d-flex justify-content-center align-items-center Feature_Header" onClick={()=> HandleAllSecondItem()} >See All Feature <i className="fa-solid fa-angle-down pl-2"></i> </h1>
+           <div className='SecondItem'><h1 className = {`d-flex justify-content-center align-items-center Feature_Header ${Feature_Header_active}`} onClick={()=> HandleAllSecondItem()} >See All Feature </h1>
            <div className={`${AllSecondItem}`}>
            <div className='SecondAllItem py-5'>
            
@@ -173,69 +184,127 @@ function Home(props) {
 
              </div>
            </div>
-           <div className='text-center py-3 my-5' style={{borderTop:"1px solid #e5e5e5",borderBottom:"1px solid #e5e5e5",color:"#02489e",fontSize:"26px",crusor:"pointer"}} onClick={()=> HandleAllSecondItem()} >See Less</div>
+           {/* <div className='text-center py-3 ' style={{color:"#02489e",fontSize:"26px",crusor:"pointer"}} onClick={()=> HandleAllSecondItem()} >See Less</div> */}
           </div> 
          </div> 
     
        </div>
+      </div> 
+
+       <div className='container text-center'>
+
+       </div>
        
-       <div className='container Section_Three pb-5'>
-       
-        <div className='text-center Services '>Our services include:</div>
+       <div className='Section_Three '>
+       <div className='container'>
+        <div className='text-center Services font-weight-bold '>Our services <span>include</span></div>
+
+          <div className='row py-5 '>
+            {
+              
+              stateservicedata.map((elem)=>{
+                     return(
+                      <div key = {elem.id} className='col-md-6 col-lg-4 col-12'>
+                         <div className='service_conternt my-2'>
+                            <div className=''>
+                             <img src = {elem.image} alt = {elem.id} className = "img-fluid service_image" style={{height:"240px" , width:"100%",objectFit:"cover"}}/>
+                                <div className='server_sub_content'>
+                                  <div className=''></div>
+                                   <div className='service_title'>
+                                <h2>{elem.Name}</h2>
+                             </div>
+                            </div> 
+                            <div className='Service_mobile'>{elem.Name}</div>
+                         </div>
+                      </div>
+                     </div> 
+                     )
+              })
+            }
+           </div> 
+          </div> 
+
        </div>
 
-       <div className='Section_four '>
+       <div className='Section_four Home_domain '>
           <div className='domain_name_heading'>Find the perfect domain name</div>
           <p className='text-center Home_Search_Domain'>Enter domain name of your choice and pick any extension name on the next step (choose between .in, .com, .online, .live, .store, .info and many more)</p>
-          <button onClick={()=> sorry()} className='Bacground_button_size py-2 px-5 mt'>Search Domain</button>
+          {/* <Link to = "domain_search" > <button  className='Bacground_button_size py-2 px-5 mt'>Search Domain</button></Link> */}
+          <Link to = "domain_search" > 
+          <div style={{width:"200px"}} className='Main_button'>
+                 <div style={{}} className='second_button'>
+                 Search Domain
+                </div>
+                <div className='Banner_overlay'></div>
+               </div>
+               </Link>
        </div>
 
 
-       <div className='Section_five container py-5'>
+       <div className='Section_five container'>
       
-       <div style={{fontSize:"48px",color:"#01489e"}} className='text-center py-4'>About us</div><hr />
+       {/* <div style={{fontSize:"48px",color:"#01489e"}} className='text-center py-2 font-weight-bold'>About us</div> */}
 
        <div className='row d-flex justify-content-center align-items-center'>
              <div className='col-lg-6 col-md-6 col-sm-12 px-5'>
                
-               <div className='px-5'>
-               <h2 className=''>Committed People are Heroes</h2>
+               <div className=''>
+               <h2 className='About_us_Heading'>Committed People are Heroes</h2>
                <p className='About_us_paragraph'>
                 The company grows as fast as the people who work here. 
                 And Hostinger offers the vibe, which is perfect for personal development. 
                 
                </p>
-               </div>
-
-
-             </div>
-             <div className='col-lg-6 col-md-6 col-sm-12  '>
-             <img src = "ContactImage/About_us.webp" name = "book" className='img-fluid Moving_image' />
-             </div>
-             
-
-             <div className='col-lg-6 col-md-6 col-sm-12 px-5 my-5'>
-                      
-             <img src = "ContactImage/About_us_two.jpg" name = "book" className='img-fluid Moving_image' />
-
-             </div>
-             <div className='col-lg-6 col-md-6 col-sm-12  '>
-             <div className='px-5'>
-               <h2 className='mt-5'>Before We Speak, We Listen</h2>
                <p className='About_us_paragraph'>
                The Customer is the highest-ranking position in Hostinger. 
                They contribute to the development of our products by giving us feedback and complaints.
                
                </p>
                </div>
+
+
              </div>
+             <div className='col-lg-6 col-md-6 col-sm-12  '>
+             <img src = "ContactImage/About_us.webp" name = "book" className='img-fluid ' />
+             </div>
+             
           
           </div>
 
-            <hr  className='mt-5 '/>
-           <div style={{fontSize:"48px",color:"#01489e"}} className='text-center py-4'>Contact us</div>
+          <div className='row d-flex justify-content-center align-items-center mb-5'>
 
-            <hr />
+          <div className='col-lg-6 col-md-6 col-sm-12 order-md-1 order-2 '>
+             <img src = "ContactImage/About_us_two.jpg" name = "book" className='img-fluid ' />
+             </div>
+
+             <div className='col-lg-6 col-md-6 col-sm-12 px-5 order-md-2 order-1'>
+               
+               <div className=''>
+               <h2 className='About_us_Heading'>Committed People are Heroes</h2>
+               <p className='About_us_paragraph'>
+                The company grows as fast as the people who work here. 
+                And Hostinger offers the vibe, which is perfect for personal development. 
+                
+               </p>
+               <p className='About_us_paragraph'>
+               The Customer is the highest-ranking position in Hostinger. 
+               They contribute to the development of our products by giving us feedback and complaints.
+               
+               </p>
+               </div>
+
+
+             </div>
+             
+          
+          </div>
+    
+       </div>
+
+       <div className=''>
+          <div className='container'>
+           {/* <div style={{fontSize:"48px",color:"#01489e"}} className='text-center py-4 font-weight-bold'>Contact us</div> */}
+
            
             <div className='row py-5'>
 
@@ -243,8 +312,7 @@ function Home(props) {
                <div className='col-lg-6 col-md-6 col-sm-12'>
                   <div className='Form1  text-center'>
                     <img src = "ContactImage/contact2.webp" name = "book" className='img-fluid Moving_image' />
-                     {/* <h1>We are Here 24/7</h1> */ } <br />
-                     {/* <p className='py-2'>We are here for you 24/7/365. Our Customer Success Team is called that way for a reason.</p> */}
+
                   </div>
                </div>
 
@@ -284,8 +352,8 @@ function Home(props) {
                </div>
 
             </div>
-            <hr />
-       </div>
+            </div>
+           </div> 
     </>
   )
 }

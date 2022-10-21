@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700&display=swap');
+
 *{
   margin:0;
   padding: 0;
-  font-family: Helvetica, sans-serif;
+  font-family: 'Mulish', sans-serif;
 }
+
+
+/* https://shtheme.com/demosd/dashcore/?page_id=235 */
